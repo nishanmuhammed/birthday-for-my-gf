@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 40px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease;
+}
+
+.title {
+    font-size: 3rem;
+    color: white;
+    animation: float 3s ease-in-out infinite;
+}
+
+.typing {
+    margin: 25px 0;
+    font-size: 1.2rem;
+    color: white;
+    line-height: 1.6;
+    animation: fadeIn 4s ease;
+}
+
+button {
+    padding: 14px 30px;
+    border: none;
+    border-radius: 40px;
+    font-size: 1rem;
+    background: #ff4d6d;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #ff2e55;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Hearts */
+.heart {
+    position: absolute;
+    font-size: 24px;
+    animation: rise 6s linear infinite;
+}
+
+@keyframes rise {
+    from {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}
